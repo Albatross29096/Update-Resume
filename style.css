@@ -1,0 +1,173 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Container */
+.resume {
+  display: flex;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  border-radius: 8px;
+}
+
+/* Sidebar */
+.left {
+  background-color: #0077b5;
+  color: white;
+  flex: 1;
+  padding: 2rem;
+  min-width: 250px;
+  border-radius: 8px 0 0 8px;
+}
+
+.left a {
+  color: #cce7ff;
+}
+
+.contact a {
+  display: block;
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #0077b5;
+  border-bottom: 2px solid #0077b5;
+  padding-bottom: 0.3rem;
+}
+
+.left h2 {
+  color: #fff;
+  border-color: #fff;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+.right {
+  flex: 2;
+  padding: 2rem;
+}
+
+p, li, a {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Print & Dark Mode Buttons */
+.print-btn {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.print-btn button {
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border: none;
+  background-color: #0077b5;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.print-btn button:hover {
+  background-color: #005f94;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .resume {
+    flex-direction: column;
+  }
+  .left, .right {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .resume {
+  background-color: #1e1e1e;
+}
+
+body.dark .left {
+  background-color: #0a5e9a;
+  color: #f0f0f0;
+}
+
+body.dark .right {
+  color: #eee;
+}
+
+body.dark h2 {
+  color: #6ab4f8;
+  border-color: #6ab4f8;
+}
+
+body.dark .left h2 {
+  color: #fff;
+  border-color: #fff;
+}
+
+body.dark a {
+  color: #9dc9ff;
+}
+
+body.dark .contact a {
+  color: #cce7ff;
+}
+
+body.dark button {
+  background-color: #333;
+  color: white;
+}
+
+body.dark button:hover {
+  background-color: #444;
+}
